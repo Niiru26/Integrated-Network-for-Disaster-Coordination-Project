@@ -1,0 +1,41 @@
+import pandas as pd
+
+# Your Excel file path
+EXCEL_FILE = r"C:\Users\NDC\Desktop\Integrated Network for Disaster Coordination Project\02_Data\Impacts of Hydro-Meteorological Hazards in Mountain Province_1.xlsx""
+
+print("=" * 50)
+print("CHECKING EXCEL FILE SHEETS")
+print("=" * 50)
+
+try:
+    # Read all sheet names
+    xl = pd.ExcelFile(EXCEL_FILE)
+    sheets = xl.sheet_names
+    
+    print(f"\n✅ File found: {EXCEL_FILE}")
+    print(f"\n📋 Available sheets in your Excel file:")
+    print("-" * 40)
+    
+    for i, sheet in enumerate(sheets, 1):
+        print(f"   {i}. '{sheet}'")
+    
+    # Preview first sheet
+    if sheets:
+        print(f"\n🔍 Preview of first sheet '{sheets[0]}':")
+        print("-" * 40)
+        df = pd.read_excel(EXCEL_FILE, sheet_name=sheets[0], nrows=3)
+        print(df)
+        print(f"\n📊 Column names:")
+        print("-" * 40)
+        for col in df.columns:
+            print(f"   • '{col}'")
+            
+except FileNotFoundError:
+    print(f"\n❌ ERROR: File not found!")
+    print(f"   Looked for: {EXCEL_FILE}")
+    print(f"\n   Please check:")
+    print("   1. The file exists on your Desktop")
+    print("   2. The filename is exactly correct")
+    print("   3. There are no extra spaces in the name")
+except Exception as e:
+    print(f"\n❌ ERROR: {e}")

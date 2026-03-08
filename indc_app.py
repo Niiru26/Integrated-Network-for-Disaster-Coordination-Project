@@ -33,7 +33,7 @@ DB_PARAMS = {
     "host": "db.bdzbweytmejqiajnvuea.supabase.co",
     "database": "postgres",
     "user": "postgres",
-    "password": "3GlkHj5WkjMSUeSq",
+    "password": st.secrets["DB_PASSWORD"],  # ← Fixed alignment
     "port": 5432,
     "connect_timeout": 5
 }
@@ -1212,3 +1212,4 @@ st.markdown(f"""
     </div>
 
 """, unsafe_allow_html=True)
+"Fix indentation error"

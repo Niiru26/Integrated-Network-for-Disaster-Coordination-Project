@@ -1,3 +1,4 @@
+    "password": st.secrets["DB_PASSWORD"],  # ← This uses the secret
 import streamlit as st
 import pandas as pd
 import psycopg2
@@ -1209,4 +1210,5 @@ st.markdown(f"""
         Part of the Comprehensive Disaster Management Platform<br>
         Last updated: {datetime.now().strftime('%Y-%m-%d %H:%M')}
     </div>
+
 """, unsafe_allow_html=True)

@@ -1,4 +1,3 @@
-    "password": st.secrets["DB_PASSWORD"],  # ← This uses the secret
 import streamlit as st
 import pandas as pd
 import psycopg2
@@ -27,13 +26,13 @@ st.set_page_config(
 )
 
 # ============================================
-# DATABASE CONNECTION
+# DATABASE CONNECTION - FIXED INDENTATION
 # ============================================
 DB_PARAMS = {
     "host": "db.bdzbweytmejqiajnvuea.supabase.co",
     "database": "postgres",
     "user": "postgres",
-    "password": st.secrets["DB_PASSWORD"],  # ← Fixed alignment
+    "password": st.secrets["DB_PASSWORD"],
     "port": 5432,
     "connect_timeout": 5
 }
@@ -92,7 +91,7 @@ MUNICIPALITIES = [
 ]
 
 # ============================================
-# HAZARD TYPES (UPDATED with Shear Line)
+# HAZARD TYPES
 # ============================================
 HAZARD_TYPES = [
     'Super Typhoon',
@@ -109,7 +108,7 @@ HAZARD_TYPES = [
 ]
 
 # ============================================
-# ENHANCED SAMPLE DATA with new fields
+# ENHANCED SAMPLE DATA
 # ============================================
 SAMPLE_DATA = [
     [2025, 'PAOLO', 'MATMO', 3, 0, 0, 0, 31, 1, 7646310.58, 25937700, 45, 120, 15, 8,
@@ -130,7 +129,7 @@ SAMPLE_DATA = [
 ]
 
 # ============================================
-# HELPER FUNCTION FOR SAFE QUERY RESULTS
+# HELPER FUNCTION
 # ============================================
 def safe_get_first_value(query_result, default=0):
     try:
@@ -139,22 +138,6 @@ def safe_get_first_value(query_result, default=0):
         return default
     except:
         return default
-
-# ============================================
-# FUNCTION TO SCROLL TO ELEMENT - FIXED
-# ============================================
-def scroll_to(section_id):
-    js = f"""
-    <script>
-        setTimeout(function() {{
-            var element = document.getElementById('{section_id}');
-            if (element) {{
-                element.scrollIntoView({{behavior: 'smooth', block: 'start'}});
-            }}
-        }}, 500);
-    </script>
-    """
-    st.components.v1.html(js, height=0)
 
 # ============================================
 # CUSTOM CSS
@@ -442,7 +425,6 @@ st.markdown("""
             line-height: 1.5;
         }
         
-        /* Scroll margin for anchor sections */
         #summary-section, #trends-section, #map-section, #forecast-section {
             scroll-margin-top: 20px;
         }
@@ -757,7 +739,6 @@ if st.session_state.get('show_form', False):
             
             st.markdown("### Significant Events")
             
-            # Event examples
             events_example = """PDRRMO EOC PDRA conducted on November 8, 2025
 TCWS #4 hoisted over MP on November 12, 2025
 Alert level raised to RED (max. level during the duration)
@@ -776,7 +757,6 @@ State of calamity declared in [areas]"""
                 help="Type each event on a new line. Bullets will be added automatically."
             )
             
-            # Quick guide placed BELOW the box
             st.markdown("""
             <div class="event-guide">
                 <strong>📋 Quick Guide - Include:</strong><br>
@@ -786,7 +766,6 @@ State of calamity declared in [areas]"""
             </div>
             """, unsafe_allow_html=True)
             
-            # Auto-format events with bullets
             if events_text:
                 lines = events_text.split('\n')
                 formatted_preview = ""
@@ -1210,6 +1189,4 @@ st.markdown(f"""
         Part of the Comprehensive Disaster Management Platform<br>
         Last updated: {datetime.now().strftime('%Y-%m-%d %H:%M')}
     </div>
-
 """, unsafe_allow_html=True)
-"Fix indentation error"

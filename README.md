@@ -1,6 +1,6 @@
 # 🌊 I.N.D.C. - Integrated Network for DRRM Coordination
 
-### Mountain Province Disaster Risk Reduction and Management Platform
+### Mountain Province Disaster Risk Reduction and Management Office Platform
 
 [![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://integrated-network-for-disaster-coordination-project-ey6zq6u3w.streamlit.app/)
 
@@ -8,7 +8,7 @@
 
 ## 📋 Overview
 
-The **Integrated Network for DRRM Coordination (I.N.D.C.)** is a comprehensive disaster risk reduction management platform built for the Mountain Province PDRRMO. It transforms 20+ years of hydrometeorological hazard data into actionable intelligence through interactive dashboards, trend analysis, and predictive forecasting.
+The **Integrated Network for DRRM Coordination (I.N.D.C.)** is a comprehensive disaster risk reduction management platform built for the Mountain Province Disaster Risk Reduction & Management Office. It transforms 20+ years of hydrometeorological hazard data into actionable intelligence through interactive dashboards, trend analysis, and predictive forecasting.
 
 ---
 
@@ -99,7 +99,7 @@ Access the application here:
 ---
 
 ## 📁 Project Structure
-📦 Integrated Network for Disaster Coordination Project
+📦 Integrated Network for Disaster Risk Reduction & Management Coordination Project
 ├── 📄 indc_app.py # Main application
 ├── 📄 requirements.txt # Python dependencies
 ├── 📄 logo.png # PDRRMO logo
@@ -186,7 +186,7 @@ Built with Streamlit, powered by Mountain Province's 20+ years of disaster data,
 
 "Transforming data into decisions, fragmentation into coordination, and reaction into readiness."
 
-© 2026 I.N.D.C. - Integrated Network for DRR Coordination
+© 2026 I.N.D.C. - Integrated Network for DRRM Coordination
 
 ## 📝 How to Add This to GitHub
 

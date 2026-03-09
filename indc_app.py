@@ -1489,10 +1489,10 @@ st.markdown("---")
 st.markdown(f"""
     <div class="footer">
         <strong style="font-size: 1rem; color: #001F3F;">I ● N ● D ● C</strong><br>
-        Integrated Network for DRR Coordination<br>
+        Integrated Network for DRRM Coordination<br>
         Mountain Province Disaster Risk Reduction and Management Office<br>
-        <em>"Analytical and Decision Support Platform"</em><br>
-        Part of the Comprehensive Disaster Management Platform<br>
-        Last updated: {datetime.now().strftime('%Y-%m-%d %H:%M')}
+        <em>"Part of the Analytical and Decision Support Platform"</em><br>
+       Last updated: {datetime.now().strftime('%Y-%m-%d %H:%M')}
     </div>
 """, unsafe_allow_html=True)
+
